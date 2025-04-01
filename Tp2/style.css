@@ -1,0 +1,127 @@
+.nom {
+    font-size: 20px;
+    font-weight: bold;
+    color: #blue;
+    margin-left: 20px;
+}
+
+.navigation {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+    position: fixed; /* Reste fixe en haut de la page */
+    z-index: 1000; /* Assure que la barre de navigation est au-dessus des autres éléments */
+}
+#menuHamburger {
+    top: 90px;
+    height: 100vh; /* Prend toute la hauteur de l'écran */
+    position: fixed; /* Reste fixe sur le côté gauche */    
+    z-index: 1000; /* Assure que le menu est au-dessus des autres éléments */
+    background-color: #f8f9fa; /* Couleur de fond du menu */
+}
+@media (min-width: 768px) {
+    #menuHamburger {
+      width: 300px !important;
+    }
+  }
+  
+
+.container {
+    margin-top: 140px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+@media (min-width: 768px) {
+    .container {
+        margin-left: 300px !important;
+    }
+  }
+.card {
+    height: 450px;
+    border-radius: 10px;
+ 
+}
+.card-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Limite à 2 lignes */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    max-height: 3rem; 
+}
+
+.card-img-top {
+    width: 100%;
+    height: 200px;  /* Ajuste la hauteur ici */
+    object-fit: cover;  /* Cela permet de garder le ratio de l'image */
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin: 20px 0;
+}
+.card-text {
+    font-size: 14px;
+    color: gray;
+    font-weight: bold
+    margin: 10px 0;
+}
+.card-price {
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    background-color:rgb(6, 117, 227);
+    width: 70px;
+    border-radius: 10px;
+}
+
+.element :hover {
+    transform: scale(1.05);
+    background-color:rgb(188, 227, 250);
+    border-radius: 10px;
+
+    transition: transform 0.3s ease;
+}
+
+.filtre{
+    display: flex;
+    justify-content: space-between;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+}
+.nbproduit{
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+    background-color:rgb(6, 117, 227);
+    width: 80px;
+    height: 30px;
+    border-radius: 10px;
+    font-weight: normal;
+}
+.réanitiliser{
+    display: flex;
+    color : red;
+    font-size: 12px;
+    background-color: rgb(255, 220, 220);
+    width: 100px;
+    height: 30px;
+    border-radius: 4px;
+    font-weight: 600;
+    align-items: center;
+    justify-content: center;
+}
+
+.prix-label{
+    font-size: 16px;
+    font-weight: bold;
+    color: rgba(90, 91, 91, 0.9);
+    margin: 20px 0;
+}
