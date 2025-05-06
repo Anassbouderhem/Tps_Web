@@ -1,7 +1,6 @@
 .nom {
     font-size: 20px;
     font-weight: bold;
-    color: #blue;
     margin-left: 20px;
 }
 
@@ -11,17 +10,25 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: #f8f9fa;
-    border-bottom: 1px solid #dee2e6;
+    background-color:rgb(250, 248, 249);
+    border-bottom: 1px solidrgb(248, 17, 17);
     position: fixed; /* Reste fixe en haut de la page */
     z-index: 1000; /* Assure que la barre de navigation est au-dessus des autres éléments */
+}
+.mode {
+    color: rgb(218, 208, 10); /* Texte jaune */
+    border-color:rgb(11, 11, 9);
+}
+.mode:hover {
+    background-color: rgb(0, 0, 0); /* Fond noir */
+    color: rgb(218, 208, 10); /* Texte jaune */
 }
 #menuHamburger {
     top: 90px;
     height: 100vh; /* Prend toute la hauteur de l'écran */
-    position: fixed; /* Reste fixe sur le côté gauche */    
-    z-index: 1000; /* Assure que le menu est au-dessus des autres éléments */
-    background-color: #f8f9fa; /* Couleur de fond du menu */
+    position: fixed;   
+    z-index: 1000; 
+    background-color:rgb(250, 249, 248); /* Couleur de fond du menu */
 }
 @media (min-width: 768px) {
     #menuHamburger {
@@ -41,6 +48,23 @@
         margin-left: 300px !important;
     }
   }
+
+.element {
+    cursor: pointer;
+  }
+
+  .element :hover {
+    transform: scale(1.05);
+    background-color:rgb(188, 227, 250);
+    border-radius: 10px;
+
+    transition: transform 0.3s ease;
+}
+
+.selection{
+    background-color:rgb(188, 227, 250);
+    border-radius: 10px;
+}
 .card {
     height: 450px;
     border-radius: 10px;
@@ -61,7 +85,7 @@
 }
 
 .card-title {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: bold;
     color: #333;
     margin: 20px 0;
@@ -77,17 +101,15 @@
     color: #fff;
     text-align: center;
     background-color:rgb(6, 117, 227);
-    width: 70px;
+    width: 86px;
     border-radius: 10px;
 }
 
-.element :hover {
-    transform: scale(1.05);
-    background-color:rgb(188, 227, 250);
-    border-radius: 10px;
-
-    transition: transform 0.3s ease;
+.article-title{
+    font-size: 22px; 
 }
+
+
 
 .filtre{
     display: flex;
@@ -100,23 +122,19 @@
     font-size: 14px;
     color: #fff;
     text-align: center;
-    background-color:rgb(6, 117, 227);
-    width: 80px;
-    height: 30px;
+    background-color:rgb(52, 88, 16);
+    width: 90px;
+
     border-radius: 10px;
     font-weight: normal;
 }
-.réanitiliser{
+.reitiliser{
     display: flex;
-    color : red;
     font-size: 12px;
-    background-color: rgb(255, 220, 220);
     width: 100px;
-    height: 30px;
     border-radius: 4px;
     font-weight: 600;
-    align-items: center;
-    justify-content: center;
+    text-align: center;
 }
 
 .prix-label{
@@ -133,3 +151,137 @@
     font-size: 16px;
     gap: 20px; 
 }
+
+#pagination .btn.active {
+    background-color: #0d6efd;
+    color: white;
+  }
+  .empty-message-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(31, 43, 55);
+    z-index: 1000;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.empty-message-content {
+    width: 100%;
+    max-width: 500px;
+}
+
+.empty-message-content .card {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 15px;
+    
+}
+.titrePanier {
+    color: rgb(2, 15, 28);
+    margin-left:30px;
+    font-family :'Segoe UI';
+    font-weight : bold;
+}
+.btn_vider{
+    width: 150px;
+}
+
+.article {
+    height: auto; 
+    min-height: 200px; 
+    margin-bottom: 1.5rem;
+}
+
+
+.article-img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain ; 
+    max-height: 200px; 
+}
+
+.col-md-4 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.article-body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.article-quantity {
+    max-width: 70px;
+}
+
+.btn-danger {
+    margin-top: auto; 
+}
+
+
+[data-bs-theme="dark"] .navigation {
+    background-color:rgb(1, 13, 22);
+    border-bottom: 1px solid #444;
+  }
+
+
+  [data-bs-theme="dark"] .fonctionalités {
+    color:rgb(229, 241, 250);
+  }
+  [data-bs-theme="dark"] .filtre {
+    color:rgb(229, 241, 250);
+  }
+  
+  [data-bs-theme="dark"] #menuHamburger {
+    background-color:rgb(1, 13, 22);  
+  }
+
+  [data-bs-theme="dark"] .element :hover {
+    background-color:rgb(5, 63, 18);  
+  }
+  [data-bs-theme="dark"] .card {
+    background-color:rgb(4, 5, 11);  
+    color:rgb(229, 246, 243); 
+  }
+  [data-bs-theme="dark"] .card-title {
+    color:rgb(229, 246, 243); 
+  }
+  [data-bs-theme="dark"] .selection {
+    background-color:rgb(5, 63, 18); 
+ 
+  }
+
+  [data-bs-theme="dark"] .titrePanier {
+    color:rgb(242, 244, 255); 
+ 
+  }
+  [data-bs-theme="dark"] .card-header {
+    color:rgb(3, 8, 41); 
+ 
+  }
+
+  [data-bs-theme="dark"] .mode {
+    border-color: rgb(218, 208, 10);
+}
+[data-bs-theme="dark"] .mode:hover {
+    background-color: rgb(250, 251, 223); 
+}
+
+
+
+
+
+
